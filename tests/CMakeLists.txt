@@ -11,3 +11,7 @@ target_link_libraries(sumlib_tests
     gtest
     gmock_main
 )
+
+add_test(NAME sumlib_tests_all
+    COMMAND "sumlib_tests"
+)
