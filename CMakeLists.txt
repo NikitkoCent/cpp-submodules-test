@@ -8,3 +8,16 @@ add_executable(sum
     func.cpp
     main.cpp
 )
+
+add_subdirectory(third-party/googletest)
+
+add_executable(sumtests
+    func.cpp
+    func.h
+    tests/tests_all.cpp
+)
+
+target_link_libraries(sumtests
+    gtest
+    gmock_main
+)
